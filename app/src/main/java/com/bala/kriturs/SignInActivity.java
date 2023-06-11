@@ -1,16 +1,21 @@
 package com.bala.kriturs;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -28,6 +33,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.util.Locale;
+
 public class SignInActivity extends AppCompatActivity {
 
     private static final String TAG = "SignInActivity";
@@ -44,10 +51,16 @@ public class SignInActivity extends AppCompatActivity {
     private Button anonymousSignInButton;
     private SignInButton signInWithGoogleButton;
 
+    private Button changeLang;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
+        loadLocale();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.app_name));
 
         emailTextInput = findViewById(R.id.signInEmailTextInput);
         passwordTextInput = findViewById(R.id.signInPasswordTextInput);
@@ -57,10 +70,18 @@ public class SignInActivity extends AppCompatActivity {
         sendVerifyMailAgainButton = findViewById(R.id.verifyEmailAgainButton);
         anonymousSignInButton = findViewById(R.id.anonymousSignInButton);
         signInWithGoogleButton = findViewById(R.id.signInWithGoogleButton);
+        changeLang = findViewById(R.id.changeLang);
 
         sendVerifyMailAgainButton.setVisibility(View.INVISIBLE);
 
         mAuth = FirebaseAuth.getInstance();
+
+        changeLang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showChangeLanguageDialog();
+            }
+        });
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +137,49 @@ public class SignInActivity extends AppCompatActivity {
                 })
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+    }
+
+    private void showChangeLanguageDialog() {
+        final String[] listItems = {"English", "Macedonian"};
+
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(SignInActivity.this);
+        mBuilder.setTitle("Choose Language");
+        mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (i == 0) {
+                    setLocale("en");
+                    recreate();
+                }
+                else if (i == 1) {
+                    setLocale("mk");
+                    recreate();
+                }
+
+                dialogInterface.dismiss();
+            }
+        });
+
+        AlertDialog mDialog = mBuilder.create();
+        mDialog.show();
+    }
+
+    private void setLocale(String lang) {
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("My_Lang", lang);
+        editor.apply();
+    }
+
+    public void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        String language = prefs.getString("My_Lang", "");
+        setLocale(language);
+
     }
 
     private void signInWithEmailAndPassword() {

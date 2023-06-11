@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kriturs</string>
+    <string name="welcome">Добредојдовте</string>
+    <string name="sign_up">Регистрирај се</string>
+    <string name="sign_in">Најави се</string>
+    <string name="sign_in_anonymously">Најавете се како непознат</string>
+    <string name="TandC">Се согласувам со условите и правилата на KriTURS</string>
+    <string name="error_view">Грешка</string>
+    <string name="password">Лозинка</string>
+    <string name="email_hint">john.doe@gmail.com</string>
+    <string name="email">Е-пошта</string>
+    <string name="forgot_password">Ја заборавивте лозинката?</string>
+    <string name="email_verify_again">Испрати повторно верификација на е-поштата</string>
+    <string name="enterEmailId">Внесете ја регистрираната е-пошта</string>
+    <string name="reset_password">Ресетирај лозинка</string>
+    <string name="user_domain_com">john.doe@gmail.com</string>
+    <string name="open">Отвори</string>
+    <string name="close">Затвори</string>
+    <string name="transactions_count">Број на трансакции</string>
+    <string name="summary">Резиме</string>
+    <string name="main_page">Резиме</string>
+    <string name="expenses">Трошоци</string>
+    <string name="incomes">Приходи</string>
+    <string name="monthly_statistics">Месечна состојба</string>
+    <string name="add_expense">Додади</string>
+    <string name="edit">Уреди</string>
+    <string name="null_string"></string>
+    <string name="hint_name">Место на трансакција</string>
+    <string name="hint_price">Сума</string>
+    <string name="hint_date">Датум и време</string>
+    <string name="month_stats">Состојба</string>
+    <string name="search">Пребарај</string>
+    <string name="share">Сподели</string>
+    <string name="send">Испрати финансиски извештај...</string>
+    <string name="name">Име</string>
+    <string name="category">Категорија</string>
+    <string name="date">Датум</string>
+
+    <string-array name="add_category_spinner">
+        <item>Круиз</item>
+        <item>Други сметки и сметки</item>
+        <item>Стан</item>
+    </string-array>
+
+    <string-array name="month_spinner">
+        <item>Јануари</item>
+        <item>Февруари</item>
+        <item>Март</item>
+        <item>Април</item>
+        <item>Мај</item>
+        <item>Јуни</item>
+        <item>Јули</item>
+        <item>Август</item>
+        <item>Септември</item>
+        <item>Октомври</item>
+        <item>Ноември</item>
+        <item>Декември</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Здраво, празен фрагмент</string>
+</resources>

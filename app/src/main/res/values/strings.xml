@@ -3,6 +3,7 @@
     <string name="welcome">Welcome</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
+    <string name="sign_in_anonymously">Sign In Anonymously</string>
     <string name="TandC">I agree to the terms and condition of the KriTURS</string>
     <string name="error_view">Error View</string>
     <string name="password">Password</string>
@@ -13,4 +14,48 @@
     <string name="enterEmailId">Enter the registered Email ID</string>
     <string name="reset_password">Reset Password</string>
     <string name="user_domain_com">john.doe@gmail.com</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="transactions_count">Number of Transactions</string>
+    <string name="summary">Summary</string>
+    <string name="main_page">Summary</string>
+    <string name="expenses">Expenses</string>
+    <string name="incomes">Revenue</string>
+    <string name="monthly_statistics">Monthly Statement</string>
+    <string name="add_expense">Add</string>
+    <string name="edit">Edit</string>
+    <string name="null_string"></string>
+    <string name="hint_name">Place of transaction</string>
+    <string name="hint_price">Sum</string>
+    <string name="hint_date">Date and Time</string>
+    <string name="month_stats">Balance</string>
+    <string name="search">Search</string>
+    <string name="share">Share</string>
+    <string name="send">Send a financial report ...</string>
+    <string name="name">Name</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+
+    <string-array name="add_category_spinner">
+        <item>Cruise</item>
+        <item>Other Fees and Bills</item>
+        <item>Apartment</item>
+    </string-array>
+
+    <string-array name="month_spinner">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

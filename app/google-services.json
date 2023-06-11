@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "383020509440",
+    "project_id": "kriturs-84914",
+    "storage_bucket": "kriturs-84914.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383020509440:android:f501ebbb0aa3a5bb85abe5",
+        "android_client_info": {
+          "package_name": "com.bala.kriturs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383020509440-5dsmaq65gbav6s3ur9m36q1jalruvdeh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bala.kriturs",
+            "certificate_hash": "94518183bb109151a7036149c94b9fae6d18bcfc"
+          }
+        },
+        {
+          "client_id": "383020509440-rkieeen3n8i2nvj07hn94stmi3o7uaed.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATkRfB-RR2kXaudjg_8IHtV_GWzdgL6_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383020509440-pmjh3picklnpstg83aqgpbb4d59gjh99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

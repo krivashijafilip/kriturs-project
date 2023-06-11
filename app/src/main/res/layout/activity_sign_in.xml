@@ -7,15 +7,6 @@
     android:orientation="vertical"
     tools:context=".SignInActivity">
 
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@android:color/black" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -82,7 +73,7 @@
             android:layout_marginTop="10dp"
             android:background="#000000"
             android:textColor="#ffffff"
-            android:text="Sign Up" />
+            android:text="@string/sign_up" />
 
         <Button
             android:id="@+id/verifyEmailAgainButton"
@@ -96,7 +87,7 @@
             android:layout_height="wrap_content"
             android:background="#000000"
             android:textColor="#ffffff"
-            android:text="Sign in anonymously" />
+            android:text="@string/sign_in_anonymously" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/signInWithGoogleButton"
@@ -104,6 +95,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/changeLang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4960C1"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp"
+            android:text="Change Language" />
 
     </LinearLayout>
 
